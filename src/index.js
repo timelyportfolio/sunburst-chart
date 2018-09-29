@@ -16,5 +16,5 @@
 
 'use strict';
 
-const PersonalitySunburstChart = require('./charts/d3v3');
+const PersonalitySunburstChart = require('./charts/d3v4');
 module.exports = PersonalitySunburstChart;
