@@ -12,7 +12,7 @@
     "prepublish": "npm run compile && npm run build",
     "compile": "node_modules/.bin/webpack",
     "compile-docs": "node_modules/.bin/webpack --devtool 'eval-cheap-module-source-map' --output-path docs --entry ./src/charts/index.js",
-    "build": "./node_modules/.bin/babel src --presets env --out-dir lib && babel dist --out-dir dist",
+    "build": "./node_modules/.bin/babel src --presets env --out-dir lib && ./node_modules/.bin/babel dist --out-dir dist",
     "test": "npm run lint && npm run codecov",
     "lint": "eslint .",
     "autofix": "eslint . --fix",
