@@ -12,7 +12,7 @@
     "prepublish": "npm run compile && npm run build",
     "compile": "node_modules/.bin/webpack",
     "compile-docs": "node_modules/.bin/webpack --devtool 'eval-cheap-module-source-map' --output-path docs --entry ./src/charts/index.js",
-    "build": "./node_modules/.bin/babel src --presets env --out-dir lib",
+    "build": "./node_modules/.bin/babel src --presets env --out-dir lib && babel dist --out-dir dist",
     "test": "npm run lint && npm run codecov",
     "lint": "eslint .",
     "autofix": "eslint . --fix",
@@ -37,6 +37,7 @@
     "watson"
   ],
   "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
     "d3-color": "^1.0.3",
     "d3-hierarchy": "^1.1.5",
     "d3-selection": "^1.3.0",
@@ -49,6 +50,7 @@
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
     "babel-minify-webpack-plugin": "^0.3.1",
+    "babel-plugin-transform-object-assign": "^6.22.0",
     "babel-preset-env": "^1.6.1",
     "chai": "^4.1.2",
     "codecov": "^3.0.0",
